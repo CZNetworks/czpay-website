@@ -556,6 +556,7 @@ section { padding: 96px 0; }
 .rate-info strong { color: var(--text-main); }
 
 .btn-swap {
+  display: block;
   width: 100%;
   padding: 15px;
   background: linear-gradient(135deg, var(--primary), var(--primary-dark));
@@ -569,6 +570,8 @@ section { padding: 96px 0; }
   font-family: inherit;
   margin-top: 8px;
   box-shadow: 0 4px 20px rgba(0,194,255,0.3);
+  text-align: center;
+  text-decoration: none;
 }
 
 .btn-swap:hover { opacity: 0.88; }
@@ -963,6 +966,38 @@ section { padding: 96px 0; }
   font-size: 0.88rem;
   color: var(--text-sub);
   line-height: 1.65;
+}
+
+/* FAQ page section */
+#faq {
+  background: var(--bg-card2);
+}
+
+.faq-page-header { margin-bottom: 60px; }
+
+.faq-page-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 56px;
+}
+
+.faq-cta {
+  text-align: center;
+  padding: 40px 24px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.faq-cta p {
+  color: var(--text-sub);
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+@media (max-width: 900px) {
+  .faq-page-grid { grid-template-columns: 1fr; }
 }
 
 /* =============================================

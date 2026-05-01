@@ -30,6 +30,7 @@
       <li><a href="#swap">스왑 서비스</a></li>
       <li><a href="#fee">수수료 안내</a></li>
       <li><a href="#guide">이용 가이드</a></li>
+      <li><a href="#faq">FAQ</a></li>
       <li><a href="#support" class="nav-cta">고객센터</a></li>
     </ul>
 
@@ -45,6 +46,7 @@
     <li><a href="#swap">스왑 서비스</a></li>
     <li><a href="#fee">수수료 안내</a></li>
     <li><a href="#guide">이용 가이드</a></li>
+    <li><a href="#faq">FAQ</a></li>
     <li><a href="#support">고객센터</a></li>
   </ul>
 </div>
@@ -69,8 +71,8 @@
       </p>
 
       <div class="hero-actions">
-        <a href="#swap" class="btn-primary">
-          ⚡ 지금 스왑하기
+        <a href="https://t.me/czpay_support" target="_blank" rel="noopener noreferrer" class="btn-primary">
+          ✈️ 텔레그램 봇으로 스왑하기
         </a>
         <a href="#guide" class="btn-outline">
           📖 이용 가이드
@@ -201,13 +203,13 @@
 
         <!-- Rate & fee -->
         <div class="rate-info" aria-live="polite">
-          <span id="rate-display">1 USDT = 7.42 TRX</span>
+          <span id="rate-display">환율 조회 중…</span>
           <strong id="fee-display">수수료: 0.0000 USDT</strong>
         </div>
 
-        <button class="btn-swap" id="btn-swap" type="button">
-          스왑 신청하기
-        </button>
+        <a href="https://t.me/czpay_support" id="btn-swap" class="btn-swap" target="_blank" rel="noopener noreferrer">
+          ✈️ 텔레그램으로 스왑 신청
+        </a>
       </div>
     </div>
   </div>
@@ -350,6 +352,136 @@
           <li>서비스 점검 시간에는 스왑이 일시 중단될 수 있습니다.</li>
         </ul>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================
+     FAQ
+====================================================== -->
+<section id="faq" aria-labelledby="faq-title">
+  <div class="container">
+    <div class="faq-page-header fade-up">
+      <span class="section-tag">FAQ</span>
+      <h2 class="section-title" id="faq-title">자주 묻는 질문</h2>
+      <p class="section-desc">
+        CZPAY 스왑 서비스에 대한 궁금증을 모았습니다.
+      </p>
+    </div>
+
+    <div class="faq-page-grid">
+      <!-- Column 1 -->
+      <div class="faq-list" role="list">
+        <div class="faq-item fade-up" role="listitem">
+          <button class="faq-question" aria-expanded="false">
+            스왑은 어떻게 진행되나요?
+            <span class="faq-chevron" aria-hidden="true">▾</span>
+          </button>
+          <div class="faq-answer" role="region">
+            <p>텔레그램 봇(@czpay_support)에 접속 후 교환할 코인 종류와 금액을 입력합니다. 봇이 안내하는 입금 주소로 전송하면 컨펌 완료 후 지정 주소로 자동 송금됩니다. 전체 과정은 평균 3~5분 이내 완료됩니다.</p>
+          </div>
+        </div>
+
+        <div class="faq-item fade-up" role="listitem">
+          <button class="faq-question" aria-expanded="false">
+            지원하는 네트워크는 무엇인가요?
+            <span class="faq-chevron" aria-hidden="true">▾</span>
+          </button>
+          <div class="faq-answer" role="region">
+            <p>현재 <strong>트론(TRON) TRC-20</strong> 네트워크만 지원합니다. 이더리움 ERC-20, BNB Chain BEP-20 등 다른 네트워크로 전송하면 자산을 복구할 수 없으니 반드시 TRC-20 주소를 사용해 주세요.</p>
+          </div>
+        </div>
+
+        <div class="faq-item fade-up" role="listitem">
+          <button class="faq-question" aria-expanded="false">
+            최소 거래 금액은 얼마인가요?
+            <span class="faq-chevron" aria-hidden="true">▾</span>
+          </button>
+          <div class="faq-answer" role="region">
+            <p>USDT→TRX 스왑 최소 금액은 <strong>10 USDT</strong>, TRX→USDT 스왑 최소 금액은 <strong>100 TRX</strong>입니다. 최소 금액 미만 입금 시 처리되지 않으며, 수수료를 제외한 금액이 원래 주소로 자동 반환됩니다.</p>
+          </div>
+        </div>
+
+        <div class="faq-item fade-up" role="listitem">
+          <button class="faq-question" aria-expanded="false">
+            수수료는 어떻게 부과되나요?
+            <span class="faq-chevron" aria-hidden="true">▾</span>
+          </button>
+          <div class="faq-answer" role="region">
+            <p>거래 금액의 <strong>0.3%</strong>를 단일 수수료로 부과합니다. TRC-20 네트워크 가스 수수료는 CZPAY가 부담하며, 입금·출금 시 별도 수수료는 없습니다. 모든 수수료는 거래 전 미리 확인할 수 있습니다.</p>
+          </div>
+        </div>
+
+        <div class="faq-item fade-up" role="listitem">
+          <button class="faq-question" aria-expanded="false">
+            환율은 어떻게 결정되나요?
+            <span class="faq-chevron" aria-hidden="true">▾</span>
+          </button>
+          <div class="faq-answer" role="region">
+            <p>시장 실시간 가격을 기반으로 환율이 결정됩니다. 스왑 신청 시점의 환율이 적용되며, 시장 변동성에 따라 최종 수령 금액이 계산기 예상치와 소폭 다를 수 있습니다.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Column 2 -->
+      <div class="faq-list" role="list">
+        <div class="faq-item fade-up" role="listitem">
+          <button class="faq-question" aria-expanded="false">
+            잘못된 주소로 보냈을 때 환불이 되나요?
+            <span class="faq-chevron" aria-hidden="true">▾</span>
+          </button>
+          <div class="faq-answer" role="region">
+            <p>잘못된 <strong>TRC-20 주소</strong>로 전송한 경우 블록체인의 특성상 복구가 불가합니다. 입금 전 반드시 주소를 다시 한번 확인해 주세요. TRC-20이 아닌 타 네트워크 주소로 보내셨다면 즉시 고객센터로 연락주세요. 상황에 따라 복구를 시도할 수 있습니다.</p>
+          </div>
+        </div>
+
+        <div class="faq-item fade-up" role="listitem">
+          <button class="faq-question" aria-expanded="false">
+            스왑이 30분 이상 처리되지 않아요.
+            <span class="faq-chevron" aria-hidden="true">▾</span>
+          </button>
+          <div class="faq-answer" role="region">
+            <p>네트워크 혼잡 시 드물게 지연될 수 있습니다. 30분 이상 미완료 시 텔레그램(@czpay_support)으로 <strong>트랜잭션 해시(TXID)</strong>를 보내주시면 우선 처리해 드립니다. 입금이 확인된 거래는 100% 완료 보장됩니다.</p>
+          </div>
+        </div>
+
+        <div class="faq-item fade-up" role="listitem">
+          <button class="faq-question" aria-expanded="false">
+            어떤 지갑을 사용할 수 있나요?
+            <span class="faq-chevron" aria-hidden="true">▾</span>
+          </button>
+          <div class="faq-answer" role="region">
+            <p>TRC-20을 지원하는 모든 지갑을 사용할 수 있습니다. <strong>TronLink, Trust Wallet, TokenPocket, Bitpie</strong> 등을 권장합니다. 거래소 주소로 직접 수령을 원하실 경우 해당 거래소가 TRC-20 USDT/TRX 입금을 지원하는지 먼저 확인해 주세요.</p>
+          </div>
+        </div>
+
+        <div class="faq-item fade-up" role="listitem">
+          <button class="faq-question" aria-expanded="false">
+            개인정보는 수집되나요?
+            <span class="faq-chevron" aria-hidden="true">▾</span>
+          </button>
+          <div class="faq-answer" role="region">
+            <p>CZPAY는 스왑 서비스 제공에 필요한 최소한의 정보(텔레그램 ID, 지갑 주소, 거래 내역)만 처리합니다. 수집한 정보는 서비스 운영 외 목적으로 사용하거나 제3자에게 제공하지 않습니다. 자세한 내용은 개인정보처리방침을 참고하세요.</p>
+          </div>
+        </div>
+
+        <div class="faq-item fade-up" role="listitem">
+          <button class="faq-question" aria-expanded="false">
+            거래 한도가 있나요?
+            <span class="faq-chevron" aria-hidden="true">▾</span>
+          </button>
+          <div class="faq-answer" role="region">
+            <p>1회 거래 최대 한도는 <strong>USDT→TRX 50,000 USDT</strong>, <strong>TRX→USDT 500,000 TRX</strong>입니다. 이를 초과하는 대량 거래는 텔레그램 고객센터로 별도 문의하시면 협의가 가능합니다.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-cta fade-up">
+      <p>원하시는 답변을 찾지 못하셨나요?</p>
+      <a href="https://t.me/czpay_support" target="_blank" rel="noopener noreferrer" class="btn-primary">
+        ✈️ 텔레그램으로 문의하기
+      </a>
     </div>
   </div>
 </section>

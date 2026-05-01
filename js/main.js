@@ -8,10 +8,36 @@
   'use strict';
 
   /* --------------------------------------------------
-     Exchange rate (demo — replace with live API later)
+     Exchange rate — fetched live from CoinGecko
+     Falls back to a hard-coded demo rate on error.
   -------------------------------------------------- */
-  const RATE_USDT_TO_TRX = 7.42;   // 1 USDT = 7.42 TRX (demo)
-  const FEE_RATE          = 0.003;  // 0.3 %
+  let RATE_USDT_TO_TRX = 7.42;   // 1 USDT = N TRX (updated by fetchRate)
+  const FEE_RATE        = 0.003;  // 0.3 %
+
+  /* --------------------------------------------------
+     Live exchange rate from CoinGecko
+  -------------------------------------------------- */
+  function fetchRate() {
+    fetch('https://api.coingecko.com/api/v3/simple/price?ids=tron&vs_currencies=usd', {
+      cache: 'no-cache'
+    })
+      .then(r => r.json())
+      .then(data => {
+        const trxUsd = data && data.tron && data.tron.usd;
+        if (trxUsd && trxUsd > 0) {
+          // 1 USDT ≈ 1 USD, so 1 USDT = (1 / trxUsd) TRX
+          RATE_USDT_TO_TRX = parseFloat((1 / trxUsd).toFixed(4));
+          calcAndDisplay();
+        }
+      })
+      .catch(() => {
+        // Silently fall back to the default rate already set
+      });
+  }
+
+  fetchRate();
+  // Refresh rate every 60 seconds
+  setInterval(fetchRate, 60000);
 
   /* --------------------------------------------------
      Helpers
@@ -120,7 +146,6 @@
   const swapArrow   = $('#swap-arrow');
   const rateDisplay = $('#rate-display');
   const feeDisplay  = $('#fee-display');
-  const btnSwap     = $('#btn-swap');
 
   // Tracks which direction is active: 'usdt_to_trx' | 'trx_to_usdt'
   let direction = 'usdt_to_trx';
@@ -183,17 +208,6 @@
       }
 
       calcAndDisplay();
-    });
-  }
-
-  if (btnSwap) {
-    btnSwap.addEventListener('click', () => {
-      const val = parseFloat(inputFrom ? inputFrom.value : 0);
-      if (!val || val <= 0) {
-        alert('교환할 금액을 입력해 주세요.');
-        return;
-      }
-      alert(`스왑 기능은 현재 준비 중입니다.\n실제 서비스 오픈 시 이용하실 수 있습니다.`);
     });
   }
 
