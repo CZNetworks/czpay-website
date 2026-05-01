@@ -26,7 +26,7 @@
         const trxUsd = data && data.tron && data.tron.usd;
         if (trxUsd && trxUsd > 0) {
           // 1 USDT ≈ 1 USD, so 1 USDT = (1 / trxUsd) TRX
-          RATE_USDT_TO_TRX = parseFloat((1 / trxUsd).toFixed(4));
+          RATE_USDT_TO_TRX = Number((1 / trxUsd).toFixed(4));
           calcAndDisplay();
         }
       })

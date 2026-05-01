@@ -555,6 +555,7 @@ section { padding: 96px 0; }
 
 .rate-info strong { color: var(--text-main); }
 
+/* Supports both <button> and <a> elements — anchor variant used in swap widget */
 .btn-swap {
   display: block;
   width: 100%;
